@@ -55,7 +55,7 @@ submitIt(event){
             <h1>Debits</h1>
             <div style={{margin:"1%"}}>
           {/* <AccountBalance accountBalance={(Math.round(this.state.accountBalance* 100) / 100).toFixed(2)}/> */}
-          {(Math.round(this.state.accountBalance* 100) / 100).toFixed(2)}
+          ${(Math.round(this.state.accountBalance* 100) / 100).toFixed(2)}
             
           <form onSubmit={this.submitIt}>    
             <input type='text' name="debitDesc" placeholder="Debit Description" />
