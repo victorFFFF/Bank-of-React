@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import AccountBalance from './AccountBalance';
 import {Link} from 'react-router-dom';
 import axios from "axios";
 
@@ -8,8 +7,7 @@ class Debit extends Component {
     super(props);
     this.state = {
       accountBalance: 0,
-      info: [],
-      recentChange: 0
+      info: []
     }
     this.submitIt = this.submitIt.bind(this);
   }
@@ -37,14 +35,15 @@ class Debit extends Component {
 
 submitIt(event){
     event.preventDefault();
+      console.log("START "+event.target.debitAmount.value)
        let temp = [event.target.debitDesc.value,
                    event.target.debitAmount.value,
                    new Date().toLocaleString()]
-        this.state.recentChange = event.target.debitAmount.value;
+                   
         this.setState ({ info: [...this.state.info, temp], accountBalance: this.state.accountBalance + Number(event.target.debitAmount.value)});
         
-        this.props.updateDebit((Math.round(this.state.recentChange* 100) / 100).toFixed(2));
-        console.log("RECENT " +this.state.recentChange)
+        this.props.updateDebit((Math.round(temp[1]* 100) / 100).toFixed(2));
+
 }
 
   render() {
