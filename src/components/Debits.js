@@ -27,7 +27,7 @@ submitIt(event){
 
     return (
         <div>
-            <Link class="btn btn-secondary btn-lg" to="/"> Home</Link>
+            <Link class="btn btn-dark btn-lg" to="/"> Home</Link>
           
             <h4>
             <div class="badge badge-pill badge-danger">Debits: </div>
@@ -41,19 +41,19 @@ submitIt(event){
           <form  onSubmit={this.submitIt}>    
             <input type='text' name="debitDesc" placeholder="Debit Description" />
             <input type='number'  name="debitAmount" placeholder="Debit amount"/>
-            <input type='submit'/>
+            <input class="btn btn-info" type='submit'/>
             </form>
 
           </div>
 
-            <ul>
+            <ul >
                 {this.props.debitInfo.map ((x , index) =>
                       <div key = {index} style={{border:"2px black solid"}}>
-                        <p  class="alert alert-danger" role="alert" role="alert"> Description: {x[0]}</p>  
-                        <p> Amount: {x[1]} </p>
-                        <p> Date:  {x[2]} </p>
+                        <p class="alert alert-dark"  > Description: {x[0]}</p>  
+                        <p  class="list-group-item"> Amount: {x[1]} </p>
+                        <p  class="list-group-item "> Date:  {x[2]} </p>
                           </div>)}
-                      
+                         
             </ul>
         </div>
     );

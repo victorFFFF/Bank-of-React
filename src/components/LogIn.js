@@ -37,7 +37,7 @@ class LogIn extends Component {
 
     return (
       <div>
-        <Link class="btn btn-secondary btn-lg" to="/"> Home</Link>
+        <Link class="btn btn-dark btn-lg" to="/"> Home</Link>
         <form onSubmit={this.handleSubmit}>
           <div class="col-md-12 text-center">
             <label  htmlFor="userName">User Name</label>

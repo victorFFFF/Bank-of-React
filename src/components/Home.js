@@ -30,7 +30,7 @@ class Home extends Component {
           <h1 class="col-md-12 text-center">Bank of React</h1>
           
           <div class="col-md-12 text-center"> 
-          <Link to="/userProfile" class="btn btn-primary" >User Profile</Link> 
+          <Link to="/userProfile" class="btn btn-primary " >User Profile</Link> 
           <Link to="/login" class="btn btn-warning" >Login</Link>
           <Link to="/credits" class="btn btn-success" >Credit</Link>
           <Link to="/debits" class="btn btn-danger" theinfo={this.state.debit} >Debits</Link>
