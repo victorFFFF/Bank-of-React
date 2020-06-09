@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 import {Link} from 'react-router-dom';
 
+
 class LogIn extends Component {
   constructor () {
     super()
@@ -36,17 +37,17 @@ class LogIn extends Component {
 
     return (
       <div>
-        <Link to="/"> Home</Link>
+        <Link class="btn btn-secondary btn-lg" to="/"> Home</Link>
         <form onSubmit={this.handleSubmit}>
-          <div>
-            <label htmlFor="userName">User Name</label>
+          <div class="col-md-12 text-center">
+            <label  htmlFor="userName">User Name</label>
             <input type="text" name="userName" onChange={this.handleChange} value={this.state.user.userName} />
           </div>
-          <div>
+          <div class="col-md-12 text-center">
             <label htmlFor="password">Password</label>
             <input type="password" name="password" />
-          </div>
-          <button>Log In</button>
+          </div  > 
+          <button  class="mx-auto d-block">Log In</button>
         </form>
       </div>
     )

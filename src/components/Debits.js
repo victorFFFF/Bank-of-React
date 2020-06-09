@@ -27,10 +27,10 @@ submitIt(event){
 
     return (
         <div>
-            <Link to="/"> Home</Link>
-
+            <Link class="btn btn-secondary btn-lg" to="/"> Home</Link>
+          
             <h4>
-            <>Debits: </>
+            <div class="badge badge-pill badge-danger">Debits: </div>
             ${(Math.round(this.props.debitAmount* 100) / 100).toFixed(2)}
             </h4>
 
@@ -38,7 +38,7 @@ submitIt(event){
 
         
             
-          <form onSubmit={this.submitIt}>    
+          <form  onSubmit={this.submitIt}>    
             <input type='text' name="debitDesc" placeholder="Debit Description" />
             <input type='number'  name="debitAmount" placeholder="Debit amount"/>
             <input type='submit'/>
@@ -49,7 +49,7 @@ submitIt(event){
             <ul>
                 {this.props.debitInfo.map ((x , index) =>
                       <div key = {index} style={{border:"2px black solid"}}>
-                        <p> Description: {x[0]}</p>  
+                        <p  class="alert alert-danger" role="alert" role="alert"> Description: {x[0]}</p>  
                         <p> Amount: {x[1]} </p>
                         <p> Date:  {x[2]} </p>
                           </div>)}
