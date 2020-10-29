@@ -99,7 +99,7 @@ class App extends Component {
 
   updateDebitInfo(event)
   {
-    this.setState({ debitInfo :[...this.state.debitInfo, event]})
+    this.setState({ debitInfo :[event, ...this.state.debitInfo]})
   }
 
   
@@ -111,7 +111,7 @@ class App extends Component {
 
   updateCreditInfo(event)
   {
-    this.setState({ creditInfo :[...this.state.creditInfo, event]})   
+    this.setState({ creditInfo :[event, ...this.state.creditInfo]})   
   }
 
   mockLogIn = (logInInfo) => {
